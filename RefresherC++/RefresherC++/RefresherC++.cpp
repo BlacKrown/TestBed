@@ -4,8 +4,11 @@
 #include "pch.h"
 #include <iostream>
 #include <time.h>
+#include <vector>
 
 #include "LinkedList.h"
+
+using namespace std;
 
 int main()
 {
@@ -23,6 +26,28 @@ int main()
 	}
 
 	ll.Print();
+
+
+	vector<int>* list = new vector<int>;
+	vector<int>::iterator itr;
+
+	list->push_back(15);
+	list->push_back(24);
+	list->push_back(73);
+	list->push_back(65);
+
+	cout << "\niterator loop\n";
+
+	for (itr = list->begin(); itr != list->end(); itr++)
+	{
+		cout << *itr << ' ';
+	}
+
+
+
+
+
+
 
 }
 
