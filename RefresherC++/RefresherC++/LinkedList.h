@@ -15,11 +15,14 @@ public:
 	LinkedList();
 	~LinkedList();
 
+	void Add(Node* node);
+	void Print();
+
+private:
 	Node* Head;
 	Node* Current;
 
-	void Add(Node* node);
-	void Print();
+	int count;
 };
 
 

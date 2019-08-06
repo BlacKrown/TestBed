@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include <iostream>
+#include <time.h>
 
 #include "LinkedList.h"
 
@@ -11,15 +12,14 @@ int main()
     std::cout << "Hello World!\n"; 
 
 	LinkedList ll;
-	Node n;
-	n.Data = 4;
-	ll.Add(&n);
+	srand(time(NULL));
 
 	for (int i = 0; i < 5; i++)
 	{
-		Node n;
-		n.Data = rand() % 100;
-		ll.Add(&n);
+		Node* n = new Node;
+		n->Data = rand() % 100;
+		n->Next = NULL;
+		ll.Add(n);
 	}
 
 	ll.Print();

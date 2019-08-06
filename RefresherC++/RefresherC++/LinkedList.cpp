@@ -6,18 +6,22 @@
 LinkedList::LinkedList()
 {
 	Head = NULL;
+	Current = NULL;
+	count = 0;
 }
 
 
 LinkedList::~LinkedList()
 {
 	//TODO:  delete all node in the list
-	if (Head != NULL)
-		delete Head;
+	//if (Head != NULL)
+	//	delete Head;
 }
 
 void LinkedList::Add(Node* node)
 {
+	count++;
+
 	if (Head == NULL)
 	{
 		Head = node;
@@ -43,9 +47,9 @@ void LinkedList::Print()
 	{
 		Current = Head;
 
-		while (Current)
+		while (Current != NULL)
 		{
-			cout << Current->Data;
+			cout << Current->Data << ", ";
 			Current = Current->Next;
 		}
 	}
