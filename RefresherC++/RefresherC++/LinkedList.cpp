@@ -13,9 +13,19 @@ LinkedList::LinkedList()
 
 LinkedList::~LinkedList()
 {
-	//TODO:  delete all node in the list
-	//if (Head != NULL)
-	//	delete Head;
+	//delete all nodes in the list
+	if (Head != NULL)
+	{
+		Current = Head;
+
+		while (Current)
+		{
+			Node* temp = Current;
+			Current = Current->Next;
+			delete temp;
+		}
+	}
+		
 }
 
 void LinkedList::Add(Node* node)

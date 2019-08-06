@@ -12,7 +12,7 @@ int main()
     std::cout << "Hello World!\n"; 
 
 	LinkedList ll;
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 
 	for (int i = 0; i < 5; i++)
 	{
@@ -23,7 +23,6 @@ int main()
 	}
 
 	ll.Print();
-
 
 }
 
